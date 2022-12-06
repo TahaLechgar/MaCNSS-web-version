@@ -1,9 +1,9 @@
 package com.macnss.model;
 
 import com.macnss.model.superclasse.User;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Agent extends User {

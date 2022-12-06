@@ -2,7 +2,7 @@ package com.macnss.model;
 
 
 import com.macnss.model.embeddable.PrescriptionId;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.time.LocalDate;
 

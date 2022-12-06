@@ -1,6 +1,6 @@
 package com.macnss.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class Medication {
     @Column( name = "refund_price")
     double refundPrice;
 
-    @OneToMany(mappedBy = "medication", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "medication")
     List<Prescription> patientFiles;
 
 

@@ -1,6 +1,6 @@
 package com.macnss.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class Consultation {
 
     boolean refundable;
 
-    @OneToMany(mappedBy = "consultationType", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "consultationType")
     List<PatientFile> patientFiles;
 
 }

@@ -1,7 +1,7 @@
 package com.macnss.model;
 
 import com.macnss.model.superclasse.User;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class Patient extends User {
     @Column( name = "full_name")
     String fullName;
 
-    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "patient")
     List<Relative> relatives;
 
 

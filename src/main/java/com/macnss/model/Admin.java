@@ -1,11 +1,13 @@
 package com.macnss.model;
 
 import com.macnss.model.superclasse.User;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import java.io.Serializable;
 
 @Entity
-public class Admin extends User {
+public class Admin extends User implements Serializable {
     @Id
     int id;
 
@@ -16,4 +18,5 @@ public class Admin extends User {
     public void setId(int id) {
         this.id = id;
     }
+
 }

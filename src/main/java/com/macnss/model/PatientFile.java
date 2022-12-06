@@ -1,7 +1,7 @@
 package com.macnss.model;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -31,10 +31,10 @@ public class PatientFile {
     @JoinColumn( name = "consultation_type")
     Consultation consultationType;
 
-    @OneToMany(mappedBy = "patientFile", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "patientFile")
     List<Attachement> attachements;
 
-    @OneToMany(mappedBy = "patientFile", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "patientFile")
     List<Prescription> medications;
 
     public void addMedication(Medication medication, int quantity) {

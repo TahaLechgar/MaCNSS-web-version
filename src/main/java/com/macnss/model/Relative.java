@@ -1,6 +1,6 @@
 package com.macnss.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.time.LocalDate;
 

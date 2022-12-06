@@ -1,6 +1,6 @@
 package com.macnss.model.superclasse;
 
-import jakarta.persistence.MappedSuperclass;
+import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public class User {
