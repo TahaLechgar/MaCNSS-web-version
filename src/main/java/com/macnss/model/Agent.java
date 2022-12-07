@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @NoArgsConstructor
@@ -15,7 +18,7 @@ import javax.persistence.Id;
 @Data
 public class Agent extends User {
 
-    @Id
+    @Id @GeneratedValue(strategy = IDENTITY)
     int id;
 
     @Column(name = "full_name")

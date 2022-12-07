@@ -10,12 +10,15 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class PatientFile {
     @Id
+    @GeneratedValue(strategy = IDENTITY)
     int id;
 
     @Column(nullable = false)
