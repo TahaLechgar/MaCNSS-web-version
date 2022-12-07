@@ -1,11 +1,18 @@
 package com.macnss.model;
 
 import com.macnss.model.superclasse.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Agent extends User {
 
     @Id
@@ -14,19 +21,4 @@ public class Agent extends User {
     @Column(name = "full_name")
     String fullName;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 }

@@ -1,11 +1,18 @@
 package com.macnss.model;
 
 import com.macnss.model.superclasse.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 import java.util.List;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Patient extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,23 +23,5 @@ public class Patient extends User {
 
     @OneToMany(mappedBy = "patient")
     List<Relative> relatives;
-
-
-    public int getId() {
-        return matriculate;
-    }
-
-    public void setId(int matriculate) {
-        this.matriculate = Patient.this.matriculate;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
 
 }

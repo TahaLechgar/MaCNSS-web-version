@@ -1,8 +1,15 @@
 package com.macnss.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Attachement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,38 +23,4 @@ public class Attachement {
     @JoinColumn( name = "patient_file_id")
     PatientFile patientFile;
 
-    // Getters and setters
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public PatientFile getPatientFile() {
-        return patientFile;
-    }
-
-    public void setPatientFile(PatientFile patientFile) {
-        this.patientFile = patientFile;
-    }
 }
