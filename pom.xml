@@ -62,11 +62,13 @@
       <version>1.4</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring5 -->
     <dependency>
       <groupId>org.thymeleaf</groupId>
-      <artifactId>thymeleaf-spring6</artifactId>
+      <artifactId>thymeleaf-spring5</artifactId>
       <version>3.1.0.RELEASE</version>
     </dependency>
+
 
     <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>

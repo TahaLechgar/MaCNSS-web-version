@@ -21,7 +21,7 @@
 
 
     <bean id="templateResolver"
-          class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
+          class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/WEB-INF/templates/" />
         <property name="suffix" value=".html" />
         <property name="templateMode" value="HTML" />
@@ -29,9 +29,16 @@
     </bean>
 
     <bean id="templateEngine"
-          class="org.thymeleaf.spring6.SpringTemplateEngine">
+          class="org.thymeleaf.spring5.SpringTemplateEngine">
         <property name="templateResolver" ref="templateResolver" />
     </bean>
+
+    <bean id="viewResolver"
+          class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="templateEngine" />
+    </bean>
+
+
 
     <bean name="dataSource"
           class="org.apache.commons.dbcp.BasicDataSource">
@@ -56,7 +63,7 @@
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.format_sql">true</prop>
                 <prop key="hibernate.globally_quoted_identifiers">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <prop key="hibernate.jdbc.time_zone">UTC</prop>
             </props>
         </property>
