@@ -21,12 +21,4 @@ public class Admin extends User implements Serializable {
     @Id @GeneratedValue(strategy = IDENTITY)
     int id;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }
