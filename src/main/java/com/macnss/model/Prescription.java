@@ -17,7 +17,7 @@ import java.time.LocalDate;
 public class Prescription {
 
     @EmbeddedId
-    PrescriptionId id;
+    PrescriptionId id = new PrescriptionId();
 
     @Column( name = "consultation_date")
     LocalDate consultationDate;

@@ -42,7 +42,7 @@ public class PatientFile {
     Consultation consultationType;
 
     @OneToMany(mappedBy = "patientFile")
-    List<Attachement> attachements;
+    List<Attachment> attachments;
 
     @OneToMany(mappedBy = "patientFile")
     List<Prescription> medications;
@@ -71,9 +71,9 @@ public class PatientFile {
     }
 
 
-    public void addAttachement(Attachement attachement) {
-        attachements.add(attachement);
-        attachement.setPatientFile(this);
+    public void addAttachement(Attachment attachment) {
+        attachments.add(attachment);
+        attachment.setPatientFile(this);
     }
 
 

@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@ControllerAdvice
 @NoArgsConstructor
 public class LoginController {
 
@@ -45,14 +44,13 @@ public class LoginController {
             model.addAttribute("msg", "Invalid username or password");
             return "login";
         }
-        session.setAttribute("admin", admin);
 
-        return "redirect:/main";
+        session.setAttribute("user", admin);
+        session.setAttribute("role", "agent");
+
+        return "redirect:/file/add";
     }
 
-    @ModelAttribute
-    public void addAttributes(Model model) {
-        model.addAttribute("msg", "Welcome to MACNSS");
-    }
+
 
 }
